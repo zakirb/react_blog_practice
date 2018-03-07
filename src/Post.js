@@ -4,6 +4,28 @@ import Comment from './Comment';
 import Author from './Author';
 
 class Post extends Component {
+  constructor(props) {
+    super()
+    this.state = {
+      body: props.body
+    }
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  changeBody(e) {
+    let newBody = prompt("What is the body?")
+    this.setState({
+      body: newBody
+    })
+  }
+
+  handleChange(e) {
+    this.setState({
+      value: e.target.value,
+      body: e.target.value
+    })
+  }
+
   render() {
 
     const {title, authors, body, comments} = this.props
@@ -24,7 +46,9 @@ class Post extends Component {
       <div>
         <h1>{title}</h1>
         {allAuthors}
-        <p>{body}</p>
+        <p>{this.state.body}</p>
+        <button onClick={ (e) => this.changeBody(e)}>Edit Body</button>
+        <input type="text" value={this.state.value} onChange={this.handleChange}  />
         <h3>Comments:</h3>
         {allComments}
       </div>
