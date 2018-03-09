@@ -1,12 +1,21 @@
 import React from 'react';
 
-const Home = props => {
-return (
-  <div>
-    <h1>Home</h1>
-    <p>This is a home page</p>
-  </div>
-)
+class Home extends Component {
+  constructor(props) {
+    super(props)
+  }
+  componentDidMount() {
+
+  }
+  render(){
+    return (
+      <div>
+        <h1>Home</h1>
+        <h2>My favorite Shakespeare poem</h2>
+        <p>This is a home page</p>
+      </div>
+    )
+  }
 }
 
 
