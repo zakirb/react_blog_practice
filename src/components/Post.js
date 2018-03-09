@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './Post.css';
+import '../Post.css';
 import Comment from './Comment';
 import Author from './Author';
+
 
 class Post extends Component {
   constructor(props) {

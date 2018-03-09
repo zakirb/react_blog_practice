@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Post from './Post';
+import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
 var post = {
@@ -21,7 +21,7 @@ var post = {
 }
 
 ReactDOM.render(<
-  Post
+  App
   title={post.title}
   authors={post.authors}
   body={post.body}
